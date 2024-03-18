@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon -e js,html app.js"
+  },
+  "dependencies": {
+    "express": "^4",
+    "morgan": "^1",
+    "nunjucks": "^3"
+  },
+  "devDependencies": {
+    "nodemon": "^3"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
