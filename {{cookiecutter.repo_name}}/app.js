@@ -2,7 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import nunjucks from "nunjucks";
 
-import router from "./views/index.js";
+import indexView from "./views/index.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,12 +13,12 @@ nunjucks.configure("templates", {
   express: app,
 });
 
-// logging
+// middleware
 app.use(morgan("dev"));
+app.use("/public", express.static("public"));
 
 // routes
-app.use("/", router);
-app.use("/public", express.static("public"));
+app.get("/", indexView);
 
 // server
 app.listen(port, () => {
