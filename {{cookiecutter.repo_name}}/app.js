@@ -15,7 +15,7 @@ nunjucks.configure("templates", {
 
 // middleware
 app.use(morgan("dev"));
-app.use("/public", express.static("public"));
+app.use(express.static("public"));
 
 // routes
 app.get("/", indexView);
