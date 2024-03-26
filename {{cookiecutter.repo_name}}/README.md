@@ -2,20 +2,23 @@
 
 ## Dependencies
 
--   Node.js v20.x
--   nvm
--   foreman (or similar process manager)
+-   Node.js v20
 
-## Quick Start
+## Installation
 
 ```bash
 $ cp .env.example .env
-$ nvm use
 $ npm install
+```
+
+## Run the App
+
+```bash
+$ npm start
 ```
 
 ## Local Development
 
 ```bash
-$ foreman start -f Procfile.dev
+$ npm run dev
 ```

@@ -1,9 +1,10 @@
 {
+  "name": "{{ cookiecutter.repo_name }}",
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon -e js,html app.js"
+    "start": "node --env-file=.env app.js",
+    "dev": "nodemon -e js,html --env-file=.env app.js"
   },
   "dependencies": {
     "express": "^4",
